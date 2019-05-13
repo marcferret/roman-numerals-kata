@@ -1,0 +1,12 @@
+/node_modules
+/coverage
+/analyzer
+npm-debug.log
+package-lock.json
+yarn-error.log
+yarn.lock
+
+# IntelliJ
+*.iml
+/.idea
+.DS_Store
