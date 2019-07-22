@@ -9,17 +9,7 @@ class RomanNumerals {
         }
 
         if (number >= 9) {
-            let conversion = 'X';
-
-            if (number === 9) {
-                conversion = `I${conversion}`;
-                return conversion;
-            }
-
-            for (let i = 10; i < number; i++) {
-                conversion += 'I';
-            }
-            return conversion;
+            return this.extracted(number, 9, 'X');
         }
 
         if (number >= 4) {
@@ -35,6 +25,20 @@ class RomanNumerals {
             }
             return conversion;
         }
+    }
+
+    extracted(number, groupNumber, groupRoman) {
+        let conversion = groupRoman;
+
+        if (number === groupNumber) {
+            conversion = `I${conversion}`;
+            return conversion;
+        }
+
+        for (let i = groupNumber + 1; i < number; i++) {
+            conversion += 'I';
+        }
+        return conversion;
     }
 }
 
