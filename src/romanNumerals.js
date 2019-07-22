@@ -6,12 +6,20 @@ class RomanNumerals {
                 conversion += 'I';
             }
             return conversion;
-        } else if (number === 9) {
-            return 'IX';
-        } else if (number === 10) {
-            return 'X';
-        } else if (number === 11) {
-            return 'XI';
+        }
+
+        if (number >= 9) {
+            let conversion = 'X';
+
+            if (number === 9) {
+                conversion = `I${conversion}`;
+                return conversion;
+            }
+
+            for (let i = 10; i < number; i++) {
+                conversion += 'I';
+            }
+            return conversion;
         }
 
         if (number >= 4) {
