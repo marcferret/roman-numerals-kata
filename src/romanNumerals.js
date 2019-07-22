@@ -1,9 +1,12 @@
 class RomanNumerals {
     convertToRomanNumeral(number) {
-        if (number === 1) {
-            return 'I';
+        let conversion = '';
+
+        for (let i = 0; i < number; i++) {
+            conversion += 'I';
         }
-        return 'II';
+
+        return conversion;
     }
 }
 
