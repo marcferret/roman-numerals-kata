@@ -6,8 +6,6 @@ class RomanNumerals {
                 conversion += 'I';
             }
             return conversion;
-        } else if (number === 4) {
-            return 'IV';
         } else if (number === 9) {
             return 'IX';
         } else if (number === 10) {
@@ -16,8 +14,14 @@ class RomanNumerals {
             return 'XI';
         }
 
-        if (number >= 5) {
+        if (number >= 4) {
             let conversion = 'V';
+
+            if (number === 4) {
+                conversion = `I${conversion}`;
+                return conversion;
+            }
+
             for (let i = 5; i < number; i++) {
                 conversion += 'I';
             }
