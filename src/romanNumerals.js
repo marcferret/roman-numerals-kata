@@ -12,6 +12,8 @@ class RomanNumerals {
             return 'IX';
         } else if (number === 10) {
             return 'X';
+        } else if (number === 11) {
+            return 'XI';
         } else if (number > 5) {
             let conversion = 'V';
             for (let i = 5; i < number; i++) {
