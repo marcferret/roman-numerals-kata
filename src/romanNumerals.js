@@ -1,16 +1,13 @@
 class RomanNumerals {
     convertToRomanNumeral(number) {
-        let conversion = '';
-
-        if(number < 4 ){
+        if (number < 4) {
+            let conversion = '';
             for (let i = 0; i < number; i++) {
                 conversion += 'I';
             }
-        }else{
-            conversion = 'IV'
+            return conversion;
         }
-
-        return conversion;
+        return 'IV';
     }
 }
 
