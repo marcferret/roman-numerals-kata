@@ -12,6 +12,8 @@ describe('Test Roman Numerals', () => {
         ${4}    | ${'IV'}
         ${5}    | ${'V'}
         ${6}    | ${'VI'}
+        ${8}    | ${'VIII'}
+        ${9}    | ${'IX'}
         `('converts $normalNumber to $romanNumeral', ({normalNumber, romanNumeral}) => {
            expect(romanNumerals.convertToRomanNumeral(normalNumber)).toEqual(romanNumeral);
        });
