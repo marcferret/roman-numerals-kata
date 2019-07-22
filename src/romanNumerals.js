@@ -6,8 +6,10 @@ class RomanNumerals {
                 conversion += 'I';
             }
             return conversion;
+        } else if (number === 4) {
+            return 'IV';
         }
-        return 'IV';
+        return 'V';
     }
 }
 
