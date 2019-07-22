@@ -14,14 +14,15 @@ class RomanNumerals {
             return 'X';
         } else if (number === 11) {
             return 'XI';
-        } else if (number > 5) {
+        }
+
+        if (number >= 5) {
             let conversion = 'V';
             for (let i = 5; i < number; i++) {
                 conversion += 'I';
             }
             return conversion;
         }
-        return 'V';
     }
 }
 
