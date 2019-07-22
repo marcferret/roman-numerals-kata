@@ -8,8 +8,12 @@ class RomanNumerals {
             return conversion;
         } else if (number === 4) {
             return 'IV';
-        } else if (number === 6){
-            return 'VI';
+        } else if (number > 5){
+            let conversion = 'V';
+            for (let i = 5; i < number; i++) {
+                conversion += 'I';
+            }
+            return conversion;
         }
         return 'V';
     }
